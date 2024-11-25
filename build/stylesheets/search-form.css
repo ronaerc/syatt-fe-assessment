@@ -1,0 +1,44 @@
+@layer components {
+  .search-form[focused="true"] {
+    border: 2px solid red; }
+  .search-form__wrapper {
+    display: block;
+    position: relative; }
+  [focused="true"] .search-form__form {
+    border-color: var(--color-grays-04); }
+  .search-form__input-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--spacing-unit-xs);
+    border: var(--border-width) solid var(--color-borders);
+    padding: var(--spacing-unit-xs); }
+  .search-form__input {
+    outline: none;
+    padding: var(--spacing-unit-xxs) var(--spacing-unit-xs);
+    width: 100%; }
+    .search-form__input::-webkit-search-cancel-button {
+      display: none; }
+  .search-form__predictive-search {
+    display: none;
+    position: relative; }
+    predictive-search[loading] .search-form__predictive-search {
+      position: absolute;
+      top: 100%;
+      z-index: 1;
+      border: var(--border-width) solid var(--color-borders);
+      border-top: 0;
+      background-color: var(--color-background);
+      width: 100%;
+      min-height: 50px; }
+    predictive-search[loading] .search-form__predictive-search, predictive-search[open] .search-form__predictive-search {
+      display: block; }
+  .search-form__results {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    z-index: 1; }
+    [has-results="true"] .search-form__results {
+      display: block; } }

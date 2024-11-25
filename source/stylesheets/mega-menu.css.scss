@@ -1,0 +1,49 @@
+@layer components {
+  .mega-menu {
+    background: var(--color-grays-02);
+    padding: var(--spacing-unit-s);
+    text-align: left;
+  }
+
+  .mega-menu__list--2 {
+    padding: var(--spacing-unit-xs);
+  }
+
+  .mega-menu__list--grid {
+    display: grid;
+    column-gap: var(--spacing-unit-s);
+  }
+
+  .mega-menu__content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-unit-xs);
+    transition: color var(--transition-speed);
+    color: var(--color-text);
+    text-decoration: none;
+
+    &:where(a):hover {
+      color: var(--color-links);
+    }
+  }
+
+  .mega-menu__link {
+    display: inline-block;
+    transition: color var(--transition-speed);
+    padding: var(--spacing-unit-xxs) 0;
+    color: var(--color-text);
+    text-decoration: none;
+
+    &:where(a):hover {
+      color: var(--color-links);
+    }
+  }
+
+  .mega-menu__link--1 {
+    font-weight: 700;
+
+    .mega-menu__item--no-children & {
+      font-weight: 400;
+    }
+  }
+}

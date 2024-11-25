@@ -1,0 +1,17 @@
+@layer components {
+  .icon {
+    display: inline-block;
+    flex-shrink: 0;
+
+    svg {
+      display: block;
+      width: 100%;
+      height: auto;
+
+      .button & {
+        width: auto;
+        height: 1em;
+      }
+    }
+  }
+}

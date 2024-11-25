@@ -1,0 +1,21 @@
+@layer components {
+  .mobile-nav {
+    position: relative; }
+    .mobile-nav :focus-visible {
+      outline-offset: -1px; }
+  .mobile-nav__account-link {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: var(--spacing-unit-xxs);
+    transition: color var(--transition-speed);
+    padding: var(--spacing-unit-s);
+    width: 100%;
+    color: var(--color-text);
+    text-decoration: none; }
+  .mobile-nav__localization {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-unit-s);
+    border-top: var(--border-width) solid var(--color-borders);
+    padding: var(--spacing-unit-s); } }

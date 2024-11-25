@@ -1,0 +1,16 @@
+@layer components {
+  .text-box {
+    border: var(--border-width-form-input) solid var(--color-form-input-borders);
+    border-radius: var(--border-radius);
+    background: var(--color-grays-01);
+    padding: var(--spacing-unit-xs);
+    width: 100%;
+    color: var(--color-form-inputs);
+    line-height: 1; }
+  .text-box--fixed-width {
+    width: 200px; }
+  .text-box--multi-line {
+    height: 150px; }
+  .text-box--error,
+  .text-box[aria-invalid="true"] {
+    border: 2px solid var(--error-color); } }

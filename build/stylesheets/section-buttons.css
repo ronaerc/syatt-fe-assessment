@@ -1,0 +1,15 @@
+@layer components {
+  .section-buttons {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-unit-s); }
+  .section-buttons--row {
+    flex-direction: row; }
+  .section-buttons--stacked {
+    flex-direction: column; }
+  .section-buttons--left {
+    justify-content: flex-start; }
+  .section-buttons--center {
+    justify-content: center; }
+  .section-buttons--right {
+    justify-content: flex-end; } }

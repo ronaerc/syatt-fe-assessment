@@ -1,0 +1,4 @@
+@layer components {
+  .footer-social {
+    grid-area: social;
+    justify-self: center; } }

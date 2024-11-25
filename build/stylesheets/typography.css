@@ -1,0 +1,157 @@
+/*
+  Calculator for scalable preferred font size in clamp funcions:
+  https://geary.co/clamp-calculator/
+
+  Confirm with each design, but viewport values for Wyatt are:
+    Root Font Size: 62.5%
+    Min Device Size: 375px
+    Max Device Size: 1440px
+*/
+@layer settings {
+  :root {
+    --font-family-body: var(--font-family-two);
+    --font-family-display: var(--font-family-three);
+    --font-family-heading: var(--font-family-one);
+    --font-size-body: 1.6rem;
+    --font-size-button-text: 1.4rem;
+    --font-size-display-1: clamp(2.8rem, 1.878vw + 2.096rem, 4.8rem);
+    --font-size-display-2: clamp(4.8rem, 3.756vw + 3.392rem, 8.8rem);
+    --font-size-form-controls: 1.6rem;
+    --font-size-heading-1: clamp(3.2rem, 2.254vw + 2.355rem, 5.6rem);
+    --font-size-heading-2: clamp(2.8rem, 1.127vw + 2.377rem, 4rem);
+    --font-size-heading-3: clamp(2.6rem, 0.939vw + 2.248rem, 3.6rem);
+    --font-size-heading-4: clamp(2.4rem, 0.376vw + 2.259rem, 2.8rem);
+    --font-size-heading-5: 2rem;
+    --font-size-heading-6: 1.6rem;
+    --font-size-label: 1.4rem;
+    --font-size-lead-text: 2rem;
+    --font-size-running-head: 1.3rem;
+    --font-size-small-text: 1.3rem;
+    --letter-spacing-1: -0.1rem;
+    --letter-spacing-2: -0.05rem;
+    --letter-spacing-3: -0.2rem;
+    --letter-spacing-button-text: var(--letter-spacing-2);
+    --letter-spacing-display: var(--letter-spacing-1);
+    --letter-spacing-heading: var(--letter-spacing-1);
+    --letter-spacing-running-head: var(--letter-spacing-3);
+    --letter-spacing-small-text: var(--letter-spacing-2);
+    --line-height-1: 1.16;
+    --line-height-2: 1.4;
+    --line-height-body: var(--line-height-2);
+    --line-height-button-text: var(--line-height-1);
+    --line-height-display: var(--line-height-1);
+    --line-height-heading: var(--line-height-1);
+    --line-height-label: var(--line-height-1);
+    --line-height-lead-text: var(--line-height-1);
+    --line-height-running-head: var(--line-height-1);
+    --line-height-small-text: var(--line-height-1);
+    --font-button-text: 700 var(--font-size-button-text) /
+      var(--line-height-button-text) var(--font-family-body);
+    --font-display-1: 400 var(--font-size-display-1) /
+      var(--line-height-display) var(--font-family-display);
+    --font-display-2: 400 var(--font-size-display-2) /
+      var(--line-height-display) var(--font-family-display);
+    --font-heading-1: 700 var(--font-size-heading-1) /
+      var(--line-height-heading) var(--font-family-heading);
+    --font-heading-2: 700 var(--font-size-heading-2) /
+      var(--line-height-heading) var(--font-family-heading);
+    --font-heading-3: 700 var(--font-size-heading-3) /
+      var(--line-height-heading) var(--font-family-heading);
+    --font-heading-4: 700 var(--font-size-heading-4) /
+      var(--line-height-heading) var(--font-family-heading);
+    --font-heading-5: 700 var(--font-size-heading-5) /
+      var(--line-height-heading) var(--font-family-heading);
+    --font-heading-6: 700 var(--font-size-heading-6) /
+      var(--line-height-heading) var(--font-family-heading);
+    --font-label: 400 var(--font-size-label) / var(--line-height-label)
+      var(--font-family-body);
+    --font-lead-text: 400 var(--font-size-lead-text) /
+      var(--line-height-lead-text) var(--font-family-body);
+    --font-paragraph: 400 var(--font-size-body) / var(--line-height-body)
+      var(--font-family-body);
+    --font-paragraph-bold: 700 var(--font-size-body) / var(--line-height-body)
+      var(--font-family-body);
+    --font-paragraph-link: 400 var(--font-size-body) / var(--line-height-body)
+      var(--font-family-body);
+    --font-running-head: 400 var(--font-size-running-head) /
+      var(--line-height-running-head) var(--font-family-three);
+    --font-small-text: 400 var(--font-size-small-text) /
+      var(--line-height-small-text) var(--font-family-body); } }
+
+@layer typography {
+  body {
+    font: var(--font-paragraph); }
+  a {
+    color: var(--color-links);
+    font: var(--font-paragraph-link);
+    text-decoration: underline; }
+    a:hover {
+      text-decoration: none; }
+  p,
+  blockquote,
+  pre {
+    margin-bottom: var(--spacing-unit-s); }
+  address {
+    font-style: inherit; }
+  .heading-1,
+  h1 {
+    font: var(--font-heading-1);
+    letter-spacing: var(--letter-spacing-heading); }
+  .heading-2,
+  h2 {
+    font: var(--font-heading-2);
+    letter-spacing: var(--letter-spacing-heading); }
+  .heading-3,
+  h3 {
+    font: var(--font-heading-3);
+    letter-spacing: var(--letter-spacing-heading); }
+  .heading-4,
+  h4 {
+    font: var(--font-heading-4);
+    letter-spacing: var(--letter-spacing-heading); }
+  .heading-5,
+  h5 {
+    font: var(--font-heading-5); }
+  .heading-6,
+  h6 {
+    font: var(--font-heading-6); }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-bottom: var(--spacing-unit-s); }
+  .no-margin {
+    margin: 0; }
+  .display-1 {
+    font: var(--font-display-1);
+    letter-spacing: var(--letter-spacing-display);
+    text-transform: uppercase; }
+  .display-2 {
+    font: var(--font-display-2);
+    letter-spacing: var(--letter-spacing-display); }
+  .paragraph {
+    font: var(--font-paragraph); }
+  .paragraph-bold {
+    font: var(--font-paragraph-bold); }
+  .paragraph-link {
+    color: var(--color-links);
+    font: var(--font-paragraph-link);
+    text-decoration: underline; }
+    .paragraph-link:hover {
+      text-decoration: none; }
+  .button-text {
+    font: var(--font-button-text);
+    letter-spacing: var(--letter-spacing-button-text); }
+  .running-head {
+    font: var(--font-running-head);
+    letter-spacing: var(--letter-spacing-running-head);
+    text-transform: uppercase; }
+  .label {
+    font: var(--font-label); }
+  .lead-text {
+    font: var(--font-lead-text); }
+  .small-text {
+    font: var(--font-small-text);
+    letter-spacing: var(--letter-spacing-small-text); } }

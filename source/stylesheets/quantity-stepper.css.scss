@@ -1,0 +1,31 @@
+@layer components {
+  .quantity-stepper {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-unit-xs);
+  }
+
+  .quantity-stepper__button {
+    .js &[disabled] {
+      visibility: hidden;
+    }
+  }
+
+  .quantity-stepper__input {
+    appearance: none;
+    border: var(--border-width) solid var(--color-borders);
+    padding: var(--spacing-unit-xs);
+    width: 6rem;
+    text-align: center;
+
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+      appearance: none;
+      margin: 0;
+    }
+  }
+
+  .quantity-stepper__icon {
+    display: block;
+  }
+}

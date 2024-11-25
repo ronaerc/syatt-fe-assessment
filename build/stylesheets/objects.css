@@ -1,0 +1,84 @@
+@layer objects {
+  .button-reset {
+    cursor: pointer;
+    margin: 0;
+    border: 0;
+    border-radius: 0;
+    background: none;
+    padding: 0;
+    overflow: visible;
+    color: inherit;
+    font: inherit;
+    line-height: normal;
+    user-select: none; }
+  .clickable-block {
+    position: relative; }
+    .clickable-block a[href]:not([href=""])::after,
+    .clickable-block button::after {
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      content: ""; }
+  /**
+   * Wraps a portion of a page's content to center the content at a given width.
+   * This is useful for full-bleed sites where some internal content should be
+   * full width unless the viewport is very wide.
+   */
+  .content-wrapper {
+    margin: 0 5vw; }
+  .content-wrapper--narrow {
+    box-sizing: content-box;
+    margin: 0 auto;
+    padding: 0 5vw;
+    max-width: 750px; }
+  .content-wrapper--very-narrow {
+    box-sizing: content-box;
+    margin: 0 auto;
+    padding: 0 5vw;
+    max-width: 550px; }
+  .fieldset-reset {
+    margin: 0;
+    border: 0;
+    padding: 0; }
+  .fit-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center; }
+  .full-bleed {
+    position: relative;
+    right: 50%;
+    left: 50%;
+    margin-right: -50vw;
+    margin-left: -50vw;
+    width: 100vw; }
+  .inline-list {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none; }
+  .list-reset {
+    margin: 0;
+    padding: 0;
+    list-style: none; }
+  .text-left {
+    text-align: left; }
+  .text-center {
+    text-align: center; }
+  .text-right {
+    text-align: right; }
+  .text-box-reset {
+    border: 0;
+    background: none;
+    padding: 0; }
+  .vertical-flow {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-unit-s); }
+  .vertical-flow > * {
+    margin: 0; }
+  .vertical-flow > :empty {
+    display: none; } }

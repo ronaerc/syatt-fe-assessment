@@ -1,0 +1,106 @@
+<div class="primary-nav" id="primary-nav">
+  <script src="/javascripts/nav-item.js" type="module" defer></script>
+  <link rel="stylesheet" href="/stylesheets/primary-nav.css" media="all">
+  <link rel="stylesheet" href="/stylesheets/nav-item.css" media="all">
+
+  <ul class="primary-nav__menu inline-list">
+    <li class="nav-item">
+      <nav-item class="nav-item__content">
+          <span class="nav-item__wrapper">
+          <a href="/collections/toys" class="nav-item__link">
+            <span class="nav-item__text">Top Selling</span>
+          </a>
+          <button type="button" class="button-reset nav-item__trigger" aria-controls="dropdown_e3Vr6B" aria-expanded="false" aria-label="Open menu for Top Selling">
+</button>
+          </span>
+
+        <div id="dropdown_e3Vr6B" class="nav-item__dropdown nav-item__dropdown--full-width" data-menu="" aria-label="Top Selling">
+          <style>
+            @layer components {
+              #dropdown_e3Vr6B .mega-menu__list--grid {
+                grid-template-columns: repeat(4, 1fr);
+              }
+            }
+          </style>
+
+          <%= partial "components/mega-menu", locals: { item: 'top-selling' } %>
+        </div>
+      </nav-item>
+    </li>
+    <li class="nav-item">
+      <nav-item class="nav-item__content">
+        <span class="nav-item__wrapper">
+          <a href="/collections/toys" class="nav-item__link">
+            <span class="nav-item__text">Toys</span>
+          </a><button type="button" class="button-reset nav-item__trigger" aria-label="Open menu for Toys" aria-controls="dropdown_9A9Fa8" aria-expanded="false"></button>
+        </span>
+
+        <div id="dropdown_9A9Fa8" class="nav-item__dropdown nav-item__dropdown--full-width" data-menu="" aria-label="Toys">
+          <style>
+            @layer components {
+              #dropdown_9A9Fa8 .mega-menu__list--grid {
+                grid-template-columns: repeat(3, 1fr);
+              }
+            }
+          </style>
+
+          <%= partial "components/mega-menu", locals: { item: 'toys' } %>
+        </div>
+      </nav-item>
+    </li>
+    <li class="nav-item">
+      <nav-item class="nav-item__content">
+          <span class="nav-item__wrapper">
+          <a href="/collections/apparel" class="nav-item__link">
+            <span class="nav-item__text">Apparel</span>
+            </a>
+            <button type="button" class="button-reset nav-item__trigger" aria-controls="dropdown_8PXbqa" aria-expanded="false" aria-label="Open menu for Apparel">
+            </button>
+          </span>
+        
+
+        <div id="dropdown_8PXbqa" class="nav-item__dropdown nav-item__dropdown--full-width" data-menu="" aria-label="Apparel">
+          <style>
+            @layer components {
+              #dropdown_8PXbqa .mega-menu__list--grid {
+                grid-template-columns: repeat(3, 1fr);
+              }
+            }
+          </style>
+
+          <%= partial "components/mega-menu", locals: { item: 'apparel' } %>
+        </div>
+      </nav-item>
+    </li>
+    <li class="nav-item">
+      <nav-item class="nav-item__content">
+        <span class="nav-item__wrapper">
+          <a href="/collections/paintings" class="nav-item__link">
+            <span class="nav-item__text">Paintings</span>
+          </a><button type="button" class="button-reset nav-item__trigger" aria-label="Open menu for Paintings" aria-controls="dropdown_YbMRrU" aria-expanded="false"></button>
+        </span>
+
+        <div id="dropdown_YbMRrU" class="nav-item__dropdown nav-item__dropdown--full-width" data-menu="" aria-label="Paintings">
+          <style>
+            @layer components {
+              #dropdown_YbMRrU .mega-menu__list--grid {
+                grid-template-columns: repeat(3, 1fr);
+              }
+            }
+          </style>
+
+          <%= partial "components/mega-menu", locals: { item: 'paintings' } %>
+        </div>
+      </nav-item>
+    </li>
+    <li class="nav-item">
+      <nav-item class="nav-item__content">
+        <span class="nav-item__wrapper">
+          <a href="/blogs/news" class="nav-item__link">
+            <span class="nav-item__text">Blog</span>
+          </a>
+        </span>
+      </nav-item>
+    </li>
+  </ul>
+</div>

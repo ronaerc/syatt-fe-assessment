@@ -1,0 +1,30 @@
+<quantity-stepper class="quantity-stepper">
+  <link rel="stylesheet" href="/stylesheets/quantity-stepper.css" media="print" onload="this.media='all'"/>
+  <script src="/javascripts/quantity-stepper.js" type="module" defer></script>
+
+  <button class="quantity-stepper__button quantity-stepper__button--decrement button-reset" name="minus" type="button" aria-label="Decrease quantity">
+    <span class="icon icon--minus quantity-stepper__icon" aria-hidden="true" focusable="false" role="presentation">
+      <svg xmlns="http://www.w3.org/2000/svg" height="24px" width="24px" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M19 13H5v-2h14v2z"></path>
+      </svg>
+    </span>
+  </button>
+
+  <input id="quantity-44198505840819" class="quantity-stepper__input text-box-reset" type="number" name="updates[]" value="1" min="0" max="10" data-line-item-index="1" />
+
+  <button class="quantity-stepper__button quantity-stepper__button--increment button-reset" name="plus" type="button" aria-label="Increase quantity">
+    <span class="icon icon--plus quantity-stepper__icon" aria-hidden="true" focusable="false" role="presentation">
+      <svg xmlns="http://www.w3.org/2000/svg" height="24px" width="24px" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"></path>
+      </svg>
+    </span>
+  </button>
+</quantity-stepper>
+
+<noscript>
+  <input type="number" name="updates[]" value="1" />
+  <button type="submit" class="button">Update</button>
+  <p class="line-item__remove">
+    <a href="/cart/change?id=44198505840819:45cf8833984c4aff128ee2b5f19b45f6&quantity=0">Remove</a>
+  </p>
+</noscript>

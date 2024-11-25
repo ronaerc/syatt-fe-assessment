@@ -1,0 +1,51 @@
+@layer components {
+  .button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    vertical-align: middle;
+    gap: var(--spacing-unit-xxs);
+    transition: background var(--transition-speed), color var(--transition-speed);
+    cursor: pointer;
+    margin: 0;
+    border: 1px solid transparent;
+    border-radius: var(--border-radius);
+    background: var(--color-brand-01);
+    padding: var(--spacing-unit-xs) var(--spacing-unit-s);
+    overflow: visible;
+    color: var(--color-grays-01);
+    font: inherit;
+    font-size: var(--font-size-button-text);
+    line-height: 1;
+    user-select: none;
+    text-decoration: none; }
+    .button:hover {
+      background: rgba(var(--color-brand-01-rgb), 0.75);
+      text-decoration: none; }
+    .button:focus-visible {
+      outline-color: var(--color-brand-01); }
+  .button--secondary {
+    border-color: var(--color-brand-01);
+    background: var(--color-grays-01);
+    color: var(--color-brand-01); }
+    .button--secondary:hover {
+      background: var(--color-brand-01);
+      color: var(--color-grays-01); }
+    .button--secondary:focus-visible {
+      outline-color: var(--color-brand-01); }
+  .button--disabled,
+  .button:disabled {
+    cursor: not-allowed;
+    border-color: var(--color-form-disabled);
+    background-color: var(--color-form-disabled-background);
+    color: var(--color-text); }
+    .button--disabled:hover, .button--disabled:focus-visible,
+    .button:disabled:hover,
+    .button:disabled:focus-visible {
+      opacity: 1;
+      border-color: var(--color-form-disabled);
+      background-color: var(--color-form-disabled-background);
+      color: var(--color-text); }
+  .button--full-width {
+    width: 100%;
+    text-align: center; } }

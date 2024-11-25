@@ -1,0 +1,49 @@
+@layer overrides {
+  /* break-word */
+  .break-word {
+    hyphens: auto;
+    word-break: break-word; }
+  /* hidden-if-js-enabled */
+  .js .hidden-if-js-enabled {
+    display: none; }
+  .hidden-unless-js-enabled {
+    display: none; }
+  .js .hidden-unless-js-enabled {
+    display: block; }
+  /* hidden */
+  .hidden {
+    display: none; }
+  @media screen and (max-width: 767px), print {
+    .hidden-until-medium {
+      display: none; } }
+  @media screen and (max-width: 1023px), print {
+    .hidden-until-wide {
+      display: none; } }
+  @media screen and (max-width: 1439px), print {
+    .hidden-until-x-wide {
+      display: none; } }
+  @media screen and (min-width: 768px), print {
+    .hidden-at-medium {
+      display: none; } }
+  @media screen and (min-width: 1024px), print {
+    .hidden-at-wide {
+      display: none; } }
+  @media screen and (min-width: 1440px), print {
+    .hidden-at-x-wide {
+      display: none; } }
+  .hidden-if-empty:empty {
+    display: none; }
+  /* truncate */
+  .truncate {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap; }
+  /* visually-hidden */
+  .visually-hidden {
+    clip: rect(0 0 0 0);
+    position: absolute;
+    clip-path: inset(50%);
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    white-space: nowrap; } }

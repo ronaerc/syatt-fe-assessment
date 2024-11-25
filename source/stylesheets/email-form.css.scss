@@ -1,0 +1,25 @@
+@layer components {
+  .email-form__input-wrapper {
+    display: flex;
+  }
+
+  .email-form__input {
+    border-right: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  .email-form__submit {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+
+  .email-form__message {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-unit-xxs);
+    margin: var(--spacing-unit-xs) 0;
+    background: var(--color-background);
+    padding: var(--spacing-unit-xs);
+  }
+}

@@ -1,0 +1,84 @@
+@layer overrides {
+  /* break-word */
+  .break-word {
+    hyphens: auto;
+    word-break: break-word;
+  }
+
+  /* hidden-if-js-enabled */
+  .js .hidden-if-js-enabled {
+    display: none;
+  }
+
+  .hidden-unless-js-enabled {
+    display: none;
+  }
+  .js .hidden-unless-js-enabled {
+    display: block;
+  }
+
+  /* hidden */
+  .hidden {
+    display: none;
+  }
+
+  .hidden-until-medium {
+    @media screen and (max-width: 767px), print {
+      display: none;
+    }
+  }
+
+  .hidden-until-wide {
+    @media screen and (max-width: 1023px), print {
+      display: none;
+    }
+  }
+
+  .hidden-until-x-wide {
+    @media screen and (max-width: 1439px), print {
+      display: none;
+    }
+  }
+
+  .hidden-at-medium {
+    @media screen and (min-width: 768px), print {
+      display: none;
+    }
+  }
+
+  .hidden-at-wide {
+    @media screen and (min-width: 1024px), print {
+      display: none;
+    }
+  }
+
+  .hidden-at-x-wide {
+    @media screen and (min-width: 1440px), print {
+      display: none;
+    }
+  }
+
+  .hidden-if-empty {
+    &:empty {
+      display: none;
+    }
+  }
+
+  /* truncate */
+  .truncate {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  /* visually-hidden */
+  .visually-hidden {
+    clip: rect(0 0 0 0);
+    position: absolute;
+    clip-path: inset(50%);
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+}

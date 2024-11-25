@@ -1,0 +1,19 @@
+<form method="post" action="/contact#contact_form" id="contact_form" accept-charset="UTF-8" class="email-form">
+  <link rel="stylesheet" href="/stylesheets/email-form.css" media="print" onload="this.media='all'">
+
+  <input type="hidden" name="form_type" value="customer">
+  <input type="hidden" name="utf8" value="✓">
+  <input type="hidden" name="contact[tags]" value="email-signup">
+
+  <div class="email-form__input-wrapper">
+    <input id="input" type="email" name="contact[email]" class="email-form__input text-box" value="" aria-required="true" autocorrect="off" autocapitalize="off" autocomplete="email" placeholder="Email" required="">
+
+    <label class="visually-hidden" for="input">
+      Email
+    </label>
+
+    <button type="submit" class="email-form__submit button" name="commit">
+      Submit
+    </button>
+  </div>
+</form>

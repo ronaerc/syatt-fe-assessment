@@ -1,0 +1,79 @@
+<live-region data-live-region="cart-items" aria-live="polite">
+  <link rel="stylesheet" href="/stylesheets/prices.css" media="all"/>
+  <link rel="stylesheet" href="/stylesheets/line-item.css" media="all"/>
+
+  <cart-items class="cart-items">
+    <form action="/cart" method="post" id="cart-items-form-mini-cart" class="cart-items__form">
+      <table class="cart-items__lines">
+        <tbody>
+          <tr class="line-item" data-line-item-1="">
+            <td class="line-item__cell line-item__cell--product">
+              <div class="line-item__product-wrapper">
+                <div class="line-item__media">
+                  <a href="/products/adidas-superstar-80s?variant=44198505840819" class="line-item__media-link" tabindex="-1" aria-label="Go to product page for ADIDAS | SUPERSTAR 80S - 5 / Black">
+                    <img src="//wyatt-sandbox.myshopify.com/cdn/shop/files/41_DWavH-OL._AC_SY695.jpg?v=1730659532&amp;width=695" alt="ADIDAS | SUPERSTAR 80S" srcset="
+                        //wyatt-sandbox.myshopify.com/cdn/shop/files/41_DWavH-OL._AC_SY695.jpg?v=1730659532&amp;width=150 150w,
+                        //wyatt-sandbox.myshopify.com/cdn/shop/files/41_DWavH-OL._AC_SY695.jpg?v=1730659532&amp;width=300 300w,
+                        //wyatt-sandbox.myshopify.com/cdn/shop/files/41_DWavH-OL._AC_SY695.jpg?v=1730659532&amp;width=450 450w,
+                        //wyatt-sandbox.myshopify.com/cdn/shop/files/41_DWavH-OL._AC_SY695.jpg?v=1730659532&amp;width=695 695w
+                      " width="695" height="695" sizes="150px" class="line-item__image" />
+                  </a>
+                </div>
+
+                <div class="line-item__details">
+                  <div class="line-item__details-wrapper">
+                    <p class="line-item__detail line-item__detail--title">
+                      <a href="/products/adidas-superstar-80s?variant=44198505840819" class="line-item__title">ADIDAS | SUPERSTAR 80S</a>
+                    </p>
+
+                    <dl class="line-item__detail line-item__detail--options">
+                      <div class="line-item__option">
+                        <dt class="line-item__option-name">Size:</dt>
+                        <dd class="line-item__option-value">5</dd>
+                      </div>
+
+                      <div class="line-item__option">
+                        <dt class="line-item__option-name">Color:</dt>
+                        <dd class="line-item__option-value">Black</dd>
+                      </div>
+                    </dl>
+                  </div>
+
+                  <button type="button" class="line-item__remove button-reset" data-remove-item-button="1">
+                    <span class="icon icon--remove line-item__remove-icon" aria-hidden="true" focusable="false" role="presentation">
+                      <svg xmlns="http://www.w3.org/2000/svg" height="24px" width="24px" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zm2.46-7.12l1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14l-2.13-2.12zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"></path>
+                      </svg>
+                    </span>
+
+                    Remove
+                  </button>
+                </div>
+              </div>
+            </td>
+
+            <td class="line-item__cell line-item__cell--prices">
+              <div class="prices">
+                <p class="prices__price">
+                  <span class="prices__value">$125.00</span>
+                </p>
+              </div>
+            </td>
+
+            <td class="line-item__cell line-item__cell--actions">
+              <%= partial "components/quantity-stepper" %>
+            </td>
+
+            <td class="line-item__cell line-item__cell--total">
+              <div class="prices">
+                <p class="prices__price">
+                  <span class="prices__value">$125.00</span>
+                </p>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </form>
+  </cart-items>
+</live-region>

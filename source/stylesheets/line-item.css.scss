@@ -1,0 +1,121 @@
+@layer components {
+  .line-item {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    border-top: var(--border-width) solid var(--color-borders);
+  }
+
+  .line-item--wide {
+    @media screen and (min-width: 768px), print {
+      display: table-row;
+    }
+  }
+
+  .line-item__cell {
+    vertical-align: middle;
+    padding: var(--spacing-unit-s);
+    text-align: center;
+  }
+
+  .line-item__cell--product {
+    width: 100%;
+    text-align: left;
+
+    .line-item--wide & {
+      @media screen and (min-width: 768px), print {
+        width: 50%;
+      }
+    }
+  }
+
+  .line-item__cell--prices {
+    width: 25%;
+
+    .line-item--wide & {
+      @media screen and (min-width: 768px), print {
+        width: 10%;
+      }
+    }
+  }
+
+  .line-item__cell--actions {
+    width: 50%;
+
+    .line-item--wide & {
+      @media screen and (min-width: 768px), print {
+        width: 30%;
+      }
+    }
+  }
+
+  .line-item__cell--total {
+    width: 25%;
+    text-align: right;
+
+    .line-item--wide & {
+      @media screen and (min-width: 768px), print {
+        width: 10%;
+      }
+    }
+  }
+
+  .line-item__product-wrapper {
+    display: flex;
+    gap: var(--spacing-unit-s);
+
+    .line-item--wide & {
+      @media screen and (min-width: 768px), print {
+        align-items: center;
+      }
+    }
+  }
+
+  .line-item__media-link {
+    display: block;
+    width: 150px;
+  }
+
+  .line-item__details {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    align-self: stretch;
+  }
+
+  .line-item__remove {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-unit-xxs);
+  }
+
+  .line-item__detail {
+    margin: 0;
+    padding: 0;
+  }
+
+  .line-item__option-name {
+    display: inline-block;
+    font-weight: bold;
+  }
+
+  .line-item__option-value {
+    display: inline-block;
+  }
+
+  .line-item__discount {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-unit-xxs);
+  }
+
+  .line-item__error {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--spacing-unit-xxs);
+    margin: var(--spacing-unit-xxs) 0 0;
+    text-align: left;
+  }
+}

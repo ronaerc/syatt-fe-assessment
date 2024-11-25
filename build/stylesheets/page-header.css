@@ -1,0 +1,43 @@
+.page-header {
+  position: relative;
+  z-index: 2;
+  transition: transform var(--transition-speed);
+  background: var(--color-background);
+  padding: var(--spacing-unit-s) 0; }
+  .page-header[sticky-visible="true"] {
+    position: sticky;
+    top: 0; }
+  .page-header[sticky-hidden="true"] {
+    transform: translateY(-100%); }
+
+.page-header__content {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-areas: "navigation logo utility" "search search search" "app app app";
+  align-items: center;
+  gap: var(--spacing-unit-s); }
+  @media screen and (min-width: 1024px), print {
+    .page-header__content {
+      grid-template-areas: "logo search utility" "navigation navigation navigation" "app app app"; } }
+.page-header__logo {
+  grid-area: logo;
+  justify-self: center; }
+  @media screen and (min-width: 1024px), print {
+    .page-header__logo {
+      justify-self: start; } }
+.page-header__utility {
+  grid-area: utility;
+  justify-self: end; }
+
+.page-header__search {
+  grid-area: search;
+  justify-self: stretch; }
+
+.page-header__navigation {
+  grid-area: navigation; }
+  @media screen and (min-width: 1024px), print {
+    .page-header__navigation {
+      justify-self: center; } }
+.page-header__app-block {
+  grid-area: app;
+  justify-self: center; }

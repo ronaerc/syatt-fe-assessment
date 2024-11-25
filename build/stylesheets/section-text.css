@@ -1,0 +1,9 @@
+@layer components {
+  .section-text p:last-child,
+  .section-text h1:last-child,
+  .section-text h2:last-child,
+  .section-text h3:last-child,
+  .section-text h4:last-child,
+  .section-text h5:last-child,
+  .section-text h6:last-child {
+    margin-bottom: 0; } }

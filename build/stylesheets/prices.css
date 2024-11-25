@@ -1,0 +1,6 @@
+@layer components {
+  .prices__price {
+    display: inline-block;
+    margin: 0; }
+  .prices__savings {
+    margin: 0; } }

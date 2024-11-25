@@ -1,0 +1,211 @@
+@layer elements {
+  /**
+  * 1. ensure the page is always at least the height of the viewport
+  * 2. ensure OSX fonts will look more consistent with other OSes that do not
+  *    utilize sub-pixel anti-aliasing.
+  * 3. changing this value will potentially break inline-block based layout
+  * 4. ensure browsers will not automatically zoom fonts.
+  * 5. ensure all pages, regardless of the height of their content, have a right-
+  *    hand scrollbar to prevent visual jittering between pages.
+  */
+  html {
+    -moz-osx-font-smoothing: grayscale; /* [2] */
+    -webkit-font-smoothing: antialiased; /* [2] */
+    text-size-adjust: 100%; /* [4] */
+    box-sizing: border-box;
+    background-color: var(--color-background);
+    height: 100%; /* [1] */
+    overflow-y: scroll; /* [5] */
+    scroll-behavior: smooth;
+    color: var(--color-text);
+    font-size: 62.5%;
+    line-height: 1.4;
+    font-family: var(--font-family-body);
+    letter-spacing: normal; /* [3] */
+
+    *,
+    *:after,
+    *:before {
+      box-sizing: inherit;
+    }
+  }
+
+  body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%; /* [1] */
+  }
+
+  :focus-visible {
+    outline-color: var(--color-focus-ring);
+    outline-offset: 0.3rem;
+  }
+
+  a:empty,
+  ul:empty,
+  dl:empty,
+  div:empty,
+  section:empty,
+  article:empty,
+  p:empty,
+  h1:empty,
+  h2:empty,
+  h3:empty,
+  h4:empty,
+  h5:empty,
+  h6:empty {
+    display: none;
+  }
+
+  /**
+  * 1. Makes all images fluid, helping responsiveness
+  * 2. Visually offsets the `alt` text that is displayed if the image fails to
+  *    load.
+  * 3. Removes white-space from the bottom of images. Safer solution to the usual
+  *    `display: block;` fix.
+  */
+  img {
+    vertical-align: middle; /* [3] */
+    max-width: 100%; /* [1] */
+    height: auto;
+    font-style: italic; /* [2] */
+  }
+
+  /**
+  * 1. Google Maps hates being told what to do. Remove the max width if an image
+  *    exists within Google's styling pattern.
+  */
+  .gm-style img {
+    max-width: none; /* [1] */
+  }
+
+  dl,
+  ul,
+  ol {
+    margin: 0 0 var(--spacing-unit-s) var(--spacing-unit-s);
+    padding: 0 0 0 var(--spacing-unit-s);
+  }
+
+  /**
+  * Provide default margins for form containment elements.
+  */
+  fieldset,
+  legend {
+    margin-bottom: var(--spacing-unit-s);
+  }
+
+  /**
+  * Provide consistent padding for fieldsets
+  */
+  fieldset {
+    padding: var(--spacing-unit-xs);
+  }
+
+  /**
+  * Set a larger default font size for basic form controls
+  * For accessibility purposes, all input types are highlighted on focus.
+  */
+  select,
+  input,
+  textarea {
+    background-color: var(--color-grays-01);
+    color: var(--color-form-inputs);
+    font-size: var(--font-size-form-controls);
+  }
+
+  label {
+    font-size: var(--font-size-form-controls);
+  }
+
+  /**
+  * Ensure select menus cannot exceed with width of their parents.
+  * We use a trick on mobile to let the select gracefully truncates
+  * his content.
+  *
+  * @url https://stackoverflow.com/a/10795269/1538101
+  */
+  select {
+    border-radius: 0;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  /**
+  * Ensure text within in a `textarea` displays at the top of the element now
+  * that they can be wrapped within a `display: table-cell` element.
+  */
+  textarea {
+    vertical-align: baseline;
+  }
+
+  /**
+  * Ensure form controls in OSX will look more consistent with other OSes that do
+  * not utilize sub-pixel anti-aliasing.
+  */
+  select,
+  button,
+  input,
+  textarea {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /**
+  * Show clear indication that a form control is not interactive by changing the
+  * cursor:
+  *
+  * 1. if the element itself is disabled or readonly
+  */
+  button[disabled],
+  input[disabled],
+  textarea[disabled],
+  select[disabled],
+  optgroup[disabled],
+  option[disabled],
+  button[readonly],
+  input[readonly],
+  textarea[readonly],
+  select[readonly],
+  optgroup[readonly],
+  option[readonly] {
+    cursor: not-allowed;
+    background-color: var(--color-form-disabled-background);
+    color: var(--color-form-disabled); /* [1] */
+  }
+
+  /**
+  * Set default color for elements using `[placeholder]` attributes.
+  *
+  * 1. becaue normalize thinks a 54% opacity on placeholders helps, somehow.
+  */
+  ::placeholder,
+  input::placeholder {
+    opacity: 1; /* [1] */
+    color: var(--color-form-placeholder);
+  }
+
+  table {
+    margin-bottom: var(--spacing-unit-s);
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  th,
+  td {
+    vertical-align: baseline;
+    padding: var(--spacing-unit-xs);
+    text-align: left;
+  }
+
+  th {
+    font-weight: bold;
+  }
+
+  td {
+    font-weight: normal;
+  }
+
+  live-region {
+    display: block;
+  }
+}

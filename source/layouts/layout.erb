@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Syatt Front End Developer Assessment</title>
+    
+    <link rel="preload" href="/stylesheets/settings.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/stylesheets/settings.css"></noscript>
+    <link rel="preload" href="/stylesheets/generic.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/stylesheets/generic.css"></noscript>
+    <link rel="preload" href="/stylesheets/elements.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/stylesheets/elements.css"></noscript>
+    <link rel="preload" href="/stylesheets/typography.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/stylesheets/typography.css"></noscript>
+    
+    <link rel="stylesheet" href="/stylesheets/objects.css" as="style" media="all">
+    <link rel="stylesheet" href="/stylesheets/overrides.css" media="all">
+    <link rel="stylesheet" href="/stylesheets/button.css" media="all">
+    <link rel="stylesheet" href="/stylesheets/icon.css" media="all">
+    <link rel="stylesheet" href="/stylesheets/section-buttons.css" media="all">
+    <link rel="stylesheet" href="/stylesheets/section-text.css" media="all">
+    <link rel="stylesheet" href="/stylesheets/text-box.css" media="all">
+
+    <script type="importmap">
+      {
+        "imports": {
+          "helpers": "/javascripts/helpers.js",
+          "wyatt": "/javascripts/wyatt.js"
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <%= partial "components/page-header" %>
+    
+    <main class="page-content">
+      <%= yield %>
+    </main>
+    
+    <%= partial "components/page-footer" %>
+  </body>
+</html>

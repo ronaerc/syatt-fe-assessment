@@ -1,0 +1,44 @@
+@layer components {
+  .media-with-text__grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-auto-flow: column;
+    gap: 2vw;
+
+    @media screen and (min-width: 768px), print {
+      align-items: center;
+    }
+
+    @media screen and (min-width: 1024px), print {
+      gap: var(--spacing-unit-s);
+    }
+  }
+
+  .media-with-text__image-wrapper {
+    grid-column: 1 / -1;
+
+    @media screen and (min-width: 768px), print {
+      grid-column: 1 / span 7;
+    }
+  }
+
+  .media-with-text__text-wrapper {
+    display: flex;
+    grid-column: 1 / -1;
+    flex-direction: column;
+    gap: var(--spacing-unit-s);
+
+    @media screen and (min-width: 768px), print {
+      grid-column: 8 / -1;
+    }
+  }
+
+  .media-with-text__block {
+    margin: 0;
+  }
+
+  .hero__content {
+    padding: 0;
+    max-width: none;
+  }
+}

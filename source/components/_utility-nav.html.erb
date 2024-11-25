@@ -1,0 +1,61 @@
+<div class="utility-nav">
+  <link rel="stylesheet" href="/stylesheets/utility-nav.css" media="all">
+
+  <ul class="utility-nav__menu inline-list" aria-label="Utility Navigation">
+    <li class="utility-nav__item utility-nav__item--account hidden-until-wide">
+      <a href="/account" class="utility-nav__action" aria-label="Account login">
+        <span class="icon icon--account utility-nav__icon" aria-hidden="true" focusable="false" role="presentation">
+          <svg xmlns="http://www.w3.org/2000/svg" height="24px" width="24px" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"></path>
+          </svg>
+        </span>
+      </a>
+    </li>
+    <li class="utility-nav__item utility-nav__item--cart">
+      <wyatt-drawer tabindex="0">
+        <script src="/javascripts/drawer.js" type="module" defer></script>
+        <link rel="stylesheet" href="/stylesheets/drawer.css" media="print" onload="this.media='all'">
+
+        <span class="utility-nav__action button-reset" data-open="" aria-label="View your cart">
+          <span class="icon icon--cart utility-nav__icon">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" width="24px" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M18 6h-2c0-2.21-1.79-4-4-4S8 3.79 8 6H6c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-8 4c0 .55-.45 1-1 1s-1-.45-1-1V8h2v2zm2-6c1.1 0 2 .9 2 2h-4c0-1.1.9-2 2-2zm4 6c0 .55-.45 1-1 1s-1-.45-1-1V8h2v2z"></path>
+            </svg>
+          </span>
+
+          <span class="page-header__cart-count">
+            <live-region data-live-region="cart-count" aria-live="polite">(1)</live-region>
+          </span>
+        </span>
+
+        <dialog class="drawer drawer--mini-cart drawer--right" data-dialog="">
+          <div class="page-messages" data-dialog-messages=""></div>
+
+          <div class="drawer__wrapper" data-wrapper="">
+            <div class="drawer__header">
+              <h2 class="drawer__title heading-5 no-margin"></h2>
+              <form method="dialog" class="drawer__close">
+                <button class="drawer__close-button button-reset" aria-label="Close drawer">
+                  <span class="icon icon--close drawer__close-icon" aria-hidden="true" focusable="false" role="presentation">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" width="24px" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path>
+                    </svg>
+                  </span>
+                </button>
+              </form>
+            </div>
+
+            <div class="drawer__body">
+              <%= partial "components/cart-items" %>
+              <%= partial "components/cart-totals" %>
+            </div>
+
+            <div class="drawer__footer">
+              <%= partial "components/cart-checkout" %>
+            </div>
+          </div>
+        </dialog>
+      </wyatt-drawer>
+    </li>
+  </ul>
+</div>

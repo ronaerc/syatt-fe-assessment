@@ -1,0 +1,24 @@
+<div class="search-form">
+  <link rel="stylesheet" href="/stylesheets/search-form.css" media="print" onload="this.media='all'">
+
+  <search-form class="search-form__wrapper">
+    <form class="search-form__form" action="/search" method="get" role="search" aria-label="Site Search">
+      <div class="search-form__input-wrapper">
+        <input type="hidden" name="options[prefix]" value="last" />
+
+        <label class="search-form__label visually-hidden" for="input">Search</label>
+
+        <input id="input" class="search-form__input text-box-reset" data-search-form-input="" type="search" name="q" value="" placeholder="Search" aria-label="Search"/>
+
+        <button type="submit" class="search-form__submit button-reset" aria-label="Search">
+          <span class="icon icon--search" aria-hidden="true" focusable="false" role="presentation">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" width="24px" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path>
+            </svg>
+          </span>
+        </button>
+      </div>
+      <input type="hidden" name="type" value="product" />
+    </form>
+  </search-form>
+</div>

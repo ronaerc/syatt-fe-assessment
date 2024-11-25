@@ -1,0 +1,12 @@
+@layer components {
+  .page-footer__content {
+    display: grid;
+    grid-template-areas: "menus" "email" "social" "utility";
+    gap: var(--spacing-unit-s);
+
+    @media screen and (min-width: 768px), print {
+      grid-template-columns: 3fr 1fr;
+      grid-template-areas: "menus email" "menus social" "utility utility";
+    }
+  }
+}

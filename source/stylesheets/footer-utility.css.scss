@@ -1,0 +1,46 @@
+@layer components {
+  .footer-utility {
+    grid-area: utility;
+  }
+
+  .footer-utility__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-unit-xs);
+
+    @media screen and (min-width: 768px), print {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+
+  .footer-utility__cell {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-unit-xs);
+
+    @media screen and (min-width: 768px), print {
+      flex-direction: row;
+    }
+  }
+
+  .footer-utility__localization {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--spacing-unit-xs);
+
+    @media screen and (min-width: 768px), print {
+    }
+  }
+
+  .footer-utiltiy__copyright {
+    margin: 0;
+  }
+
+  .footer-utility__nav-items {
+    gap: var(--spacing-unit-xs);
+  }
+}
